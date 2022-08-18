@@ -1,0 +1,29 @@
+.first{
+    width: 60%;
+    background-color: #66BFBF;
+    padding: 0.5em;
+}
+.second{
+    width: 90%;
+    background-color: #EAF6F6;
+    padding: 0.5em;
+}
+.third{
+    width: 50%;
+    background-color: #FF0063;
+    padding: 0.5em;
+}
+.fourth{
+    width:  80%;
+    background-color: #3B9AE1;
+    padding: 0.5em;
+}
+.fifth{
+    width: 75%;
+    background-color: #59CE8F;
+    padding: 0.5em;
+}
+body{
+    color: black;
+    background-color: black;
+}

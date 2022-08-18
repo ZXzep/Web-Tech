@@ -1,0 +1,23 @@
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+  
+.left {
+  float: left;
+  padding: 15px;
+  background: white;
+}
+  
+.cvphoto {
+  padding: 15px;
+  background: white;
+
+}
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1{
+  color: blueviolet;
+}
