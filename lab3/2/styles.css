@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans Thai', sans-serif;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(156,0,255,1) 100%);
+    width: auto;
+    height: auto;
+}
+
+label {
+    color: #F0EDEE;
+}
+
+button {
+    color: #F0EDEE;
+}
+
+.container {
+    background-color: hsla(0, 0%, 0%, 70%);
+    border-radius: 20px;
+}
+
+form {
+    padding: 30px;
+}
