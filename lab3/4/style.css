@@ -1,0 +1,96 @@
+.math {
+    background-color: #cec0fb;
+}
+
+.thai {
+    background-color: #f6cbd5;
+}
+
+.english {
+    background-color: #d6f8d3;
+}
+
+.science {
+    background-color: #dcfdf4;
+}
+
+.social {
+    background-color: #ffe5b8;
+}
+
+.math,
+.thai,
+.english,
+.science,
+.social {
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    margin: 5px;
+    border: 5px black;
+}
+
+button {
+    margin: 5px;
+    background-color: #4CAF50;
+    border: none;
+    color: white; 
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+@keyframes math {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 600px;
+    }
+}
+
+@keyframes thai {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 800px;
+    }
+}
+
+@keyframes eng {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 900px;
+    }
+}
+
+@keyframes sci {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 400px;
+    }
+}
+
+@keyframes social {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 500px;
+    }
+}
