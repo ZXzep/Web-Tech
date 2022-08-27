@@ -1,0 +1,223 @@
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px 0px 5px;
+    color: #FFC23C;
+}
+
+.table {
+    position: relative;
+    transform: translate(77%, 0%);
+    padding: 15% 19% 24% 15%;
+    width: 5%;
+}
+
+#box1 {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box1:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box2 {
+    position: absolute;
+    top: 1%;
+    left: 34.5%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box2:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box3 {
+    position: absolute;
+    top: 1%;
+    left: 68%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box3:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box4 {
+    position: absolute;
+    top: 34.5%;
+    left: 1%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box4:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box5 {
+    position: absolute;
+    top: 34.5%;
+    left: 34.5%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box5:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box6 {
+    position: absolute;
+    top: 34.5%;
+    left: 68%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box6:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box7 {
+    position: absolute;
+    top: 68%;
+    left: 1%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box7:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#box8 {
+    position: absolute;
+    top: 68%;
+    left: 34.5%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box8:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+#box9 {
+    position: absolute;
+    top: 68%;
+    left: 68%;
+    padding: 0%;
+    font-size: 90px;
+    max-width: 31%;
+    width: 31%;
+    max-height: 31%;
+    height: 31%;
+    background-color: #31087B;
+    transition: linear 0.1s;
+    color: #FFC23C;
+}
+#box9:hover{
+    cursor: pointer;
+    background-color: #FA2FB5;
+    color: black;
+    border-color: #FFC23C;
+}
+
+#reset{
+    position: absolute;
+    margin: auto;
+    background-color: #FFC23C;
+    top: 102%;
+    left: 2%;
+    width: 95%;
+    height: 10%;
+    font-size: 180%;
+}
+
+#reset:hover{
+    cursor: pointer;
+    color: white;
+}
+body{
+    background: #100720;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
