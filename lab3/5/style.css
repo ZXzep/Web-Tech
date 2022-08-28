@@ -6,7 +6,7 @@ body {
     width: 100%;
 }
 .left{
-    width: 50%;
+    width: 800px;
     height: 100%;
     margin: 8% 0 5% 5%;
     background-color: white;
@@ -14,9 +14,12 @@ body {
     border-radius: 20px;
 }
 .right{
-    width: 30%;
-    height: 100%;
-    margin: 15% 0 5% 5%;
+    width: 600px;
+    height: 350px;
+    left: 57%;
+    top: 30.5%;
+    position: absolute;
+    /* margin: 15% 0 5% 5%; */
     background-color: black;
     padding: 100px 50px 100px 50px;
     border-radius: 20px;
@@ -24,7 +27,7 @@ body {
 }
 img{
     position: absolute;
-    left: 73%;
-    top: 30.5%;
+    left: 50%;
+    top: 5%;
 }
 
