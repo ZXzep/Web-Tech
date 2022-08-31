@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">1. One</p>
+        <p id="p2">2. Two</p>
+        <p id="p3">3. Three</p>
+        <!-- add a new element here -->
+    </div>
+
+
+    <button type="button" onclick="addNode()">Add Node</button>
+    <button type="button" onclick="deleteNode()">Delete Node</button>
+    <button type="button" onclick="addNewImage()">Add Image</button>
+</body>
+<script>
+    function addNode() {
+        // <p>a new paragraph</p>
+        let ptag = document.createElement("p");
+        let txt = document.createTextNode("4. a new paragraph");
+        ptag.appendChild(txt);
+        // select a parent node            
+        let parent1 = document.getElementById("div1");
+        parent1.appendChild(ptag);
+
+        /*  uncomment in step 2 **/
+        let childP1 = document.getElementById("p1");
+        parent1.insertBefore(ptag, childP1);
+
+    }
+    function addNewImage() {
+        // <img src="apples.jpg">
+        let imgtag = document.createElement("img");
+        let srcAttr = document.createAttribute("src");
+        srcAttr.value = "http://10.0.15.20/312lab4/apples.jpg";
+        imgtag.setAttributeNode(srcAttr);
+        // add to <body>
+        widthAttr.value = "400";
+        imgtag.setAttributeNode(widthAttr);
+        document.body.appendChild(imgtag);
+    }
+
+    function deleteNode() {
+        let parent2 = document.getElementById("div1");
+        let delPtag = document.getElementById("p1");
+        parent2.removeChild(delPtag);
+    }
+</script>
+
+</html>

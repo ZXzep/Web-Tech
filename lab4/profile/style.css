@@ -1,0 +1,380 @@
+* {
+    margin: 0%;
+}
+
+body,
+html {
+    scroll-snap-type: y mandatory;
+    overflow-x: visible;
+}
+
+.eng {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.th {
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+#page1 {
+    background-color: #635ad9;
+    text-align: center;
+    /* background-image: url("bg2.png"); */
+    background-size: cover;
+    background-position: center;
+}
+
+#port_en {
+    color: #212226;
+    font-size: 20em;
+    margin: auto;
+    margin-bottom: 20%;
+}
+
+#bar0 {
+    position: absolute;
+    background-color: #212226;
+    top: 55%;
+    left: 16%;
+    width: 1280px;
+    height: 20px;
+}
+
+#port_th {
+    position: absolute;
+    color: #212226;
+    font-size: 10em;
+    left: 19%;
+    top: 54%;
+}
+
+#page2 {
+    background-color: #212226;
+    justify-content: center;
+}
+
+#pfp {
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    background-image: url("img/pfp2.jpg");
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 100%; */
+    top: 12%;
+    left: 25%;
+    box-shadow: 0 0 0 10px #635ad9;
+    /* margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; */
+}
+
+#profile {
+    position: absolute;
+    color: #212226;
+    font-size: 17em;
+    text-align: center;
+    transform: rotateZ(-90deg);
+    left: -41%;
+    bottom: 30%;
+    letter-spacing: calc(15px);
+    background-color: #635ad9;
+    width: 100vw;
+    height: fit-content;
+}
+
+#name {
+    position: relative;
+    color: #635ad9;
+    top: 8%;
+    left: 14%;
+    text-align: center;
+    font-size: 4em;
+}
+
+#bar1 {
+    position: absolute;
+    background-color: #635ad9;
+    top: 17%;
+    left: 48%;
+    width: 610px;
+    height: 10px;
+}
+
+#kid {
+    position: absolute;
+    color: #635ad9;
+    top: 20%;
+    left: 48%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#sex {
+    position: absolute;
+    color: #635ad9;
+    top: 24%;
+    left: 48%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#date {
+    position: absolute;
+    color: #635ad9;
+    top: 28%;
+    left: 48%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#status {
+    position: absolute;
+    color: #635ad9;
+    top: 32%;
+    left: 48%;
+    text-align: center;
+    font-size: 2em;
+}
+
+#caption {
+    position: absolute;
+    color: #635ad9;
+    top: 47%;
+    left: 58%;
+    text-align: center;
+    font-size: 3em;
+}
+
+#ig {
+    position: absolute;
+    transform: scale(0.2);
+    bottom: -8%;
+    right: 25%;
+}
+
+#ig:hover {
+    transform: scale(0.18);
+}
+
+#fb {
+    position: absolute;
+    transform: scale(0.2);
+    bottom: -8%;
+    right: 16%;
+}
+
+#fb:hover {
+    transform: scale(0.18);
+}
+
+#gh {
+    position: absolute;
+    transform: scale(0.2);
+    bottom: -8%;
+    right: 7%;
+}
+
+#gh:hover {
+    transform: scale(0.18);
+}
+
+#page3 {
+    background-color: #212226;
+    justify-content: center;
+}
+
+#hobby {
+    position: absolute;
+    color: #212226;
+    font-size: 17em;
+    text-align: center;
+    transform: rotateZ(-90deg);
+    left: -41%;
+    bottom: 30%;
+    letter-spacing: calc(10px);
+    width: 100vw;
+    height: fit-content;
+    background-color: #635ad9;
+}
+
+#hobbytxt {
+    position: absolute;
+    color: #635ad9;
+    font-size: 2em;
+    left: 28%;
+    top: 15%;
+    text-align: center;
+    width: 1200px;
+}
+
+.gimg {
+    box-shadow: 0 0 0 5px #635ad9;
+    width: 350px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+}
+
+#big_img {
+    width: 1200px;
+    position: relative;
+}
+
+#valo {
+    top: 44%;
+    left: 17%;
+    background-image: url("img/valo.jpg");
+}
+
+#lol {
+    top: 44%;
+    left: 51%;
+    background-image: url("img/lol.jpg");
+}
+
+#genshin {
+    top: 44%;
+    left: 85%;
+    background-image: url("img/genshin.jpg");
+}
+
+#music_bar {
+    position: absolute;
+    width: 1200px;
+    height: 50px;
+    background-color: #635ad9;
+    color: #212226;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    left: 28%;
+    bottom: 20%;
+}
+
+#music_bar:hover {
+    transform: scale(0.99);
+}
+
+#page4 {
+    background-color: #212226;
+    justify-content: center;
+}
+
+#work {
+    position: absolute;
+    color: #212226;
+    font-size: 17em;
+    text-align: center;
+    transform: rotateZ(-90deg);
+    left: -41%;
+    bottom: 30%;
+    letter-spacing: calc(15px);
+    width: 100vw;
+    height: fit-content;
+    background-color: #635ad9;
+}
+
+.work_img {
+    box-shadow: 0 0 0 5px #635ad9;
+    width: 1000px;
+    height: 600px;
+    background-size: cover;
+    position: absolute;
+    background-image: url("img/prepro.JPG");
+    top: 6%;
+    left: 35%;
+}
+
+#prepro_txt {
+    position: absolute;
+    color: #635ad9;
+    font-size: 3em;
+    left: 32%;
+    top: 69%;
+    text-align: center;
+    width: 1100px;
+}
+
+#work_txt {
+    position: absolute;
+    color: #635ad9;
+    font-size: 2em;
+    left: 32%;
+    top: 78%;
+    text-align: center;
+    width: 1100px;
+}
+
+#bar2 {
+    position: absolute;
+    background-color: #635ad9;
+    top: 76%;
+    left: 48.5%;
+    width: 480px;
+    height: 7px;
+}
+
+#page5 {
+    background-color: #212226;
+    justify-content: center;
+}
+
+#skill {
+    position: absolute;
+    color: #212226;
+    font-size: 17em;
+    text-align: center;
+    transform: rotateZ(-90deg);
+    left: -41%;
+    bottom: 30%;
+    letter-spacing: calc(15px);
+    width: 100vw;
+    height: fit-content;
+    background-color: #635ad9;
+}
+
+#skill_txt {
+    position: absolute;
+    color: #635ad9;
+    font-size: 4em;
+    left: 25%;
+    top: 25%;
+}
+
+#skill_txt1 {
+    position: absolute;
+    color: #635ad9;
+    font-size: 4em;
+    right: 10%;
+    top: 25%;
+}
+
+#coding {
+    position: absolute;
+    color: #635ad9;
+    font-size: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #212226;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #635ad9;
+}

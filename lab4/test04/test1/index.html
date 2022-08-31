@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <p id="p1">This is paragraph</p>
+
+
+    <!-- <ol>
+        <li></li>
+    </ol> -->
+
+</body>
+<script>
+    let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let pElement = document.createElement("p");
+    let text = document.createTextNode("This is a new node");
+    pElement.appendChild(text);
+    document.body.appendChild(pElement);
+
+    let olist = document.createElement("ol");
+    for (let i = 0; i < 7; i++){
+    let li = document.createElement("li");
+    let textNode = document.createTextNode(days[i]);
+    li.appendChild(textNode);
+    olist.appendChild(li);
+    }
+    document.body.appendChild(olist);
+</script>
+
+</html>
