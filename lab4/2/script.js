@@ -1,125 +1,94 @@
-let check = true;
-function change() {
-    let all = document.getElementById("all")
-    let sub = document.getElementById("sub")
-    if (check) {
-        english(all, sub);
-        check = false;
-    } else {
-        thai(all, sub);
-        check = true;
+let lang = {
+    th: {
+      name: 'ชื่อ',
+      surname: 'นามสกุล',
+      country: ['ประเทศ', [
+        {name: 'เลือกประเทศ', value: ''},
+        {name: 'ไทย', value: 'th'},
+        {name: 'เวียดนาม', value: 'vn'},
+        {name: 'ลาว', value: 'la'},
+        {name: 'มาเลเซีย', value: 'my'},
+        {name: 'สิงคโปร์', value: 'sg'},
+        {name: 'ฟิลิปปินส์', value: 'ph'},
+        {name: 'เมียนมา', value: 'mm'},
+        {name: 'กัมพูชา', value: 'kh'},
+        {name: 'บรูไน', value: 'bn'},
+      ]],
+      btnlabel: 'เปลี่ยนเป็นภาษาอังกฤษ',
+    },
+    en: {
+      name: 'Name',
+      surname: 'Surname',
+      country: ['Country', [
+        {name: 'Choose country', value: ''},
+        {name: 'Thailand', value: 'th'},
+        {name: 'Vietnam', value: 'vn'},
+        {name: 'Laos', value: 'la'},
+        {name: 'Malaysia', value: 'my'},
+        {name: 'Singapore', value: 'sg'},
+        {name: 'Philippines', value: 'ph'},
+        {name: 'Myanmar', value: 'mm'},
+        {name: 'Cambodia', value: 'kh'},
+        {name: 'Brunei', value: 'bn'},
+      ]],
+      btnlabel: 'Change to Thai',
     }
-}
-function thai() {
-    all.removeChild(sub);
-    let newSub = document.createElement("div");
-    all.appendChild(newSub);
-    let subAtt = document.createAttribute("id");
-    subAtt.value = "sub";
-    newSub.setAttributeNode(subAtt);
-    let newName = document.createElement("p");
-    let nameText = document.createTextNode("ชื่อ:");
-    newName.appendChild(nameText);
-    let nameInput = document.createElement("input");
-    let inputAtt = document.createAttribute("type");
-    inputAtt.value = "text";
-    nameInput.setAttributeNode(inputAtt);
-    newName.appendChild(nameInput);
-    newSub.appendChild(newName);
-    let newLName = document.createElement("p");
-    let lNameText = document.createTextNode("นามสกุล:");
-    newLName.appendChild(lNameText);
-    let lNameInput = document.createElement("input");
-    let inputAtt2 = document.createAttribute("type");
-    lNameInput.setAttributeNode(inputAtt2);
-    newLName.appendChild(lNameInput);
-    newSub.appendChild(newLName);
-    let country = document.createElement("p");
-    let countryText = document.createTextNode("ประเทศ:");
-    country.appendChild(countryText);
-    let select = document.createElement("select");
-    let i = 0;
-    for (i; i < 10; i++) {
-        let country1 = document.createElement("option");
-        if (i == 0) { let country1Text = document.createTextNode("เลือกประเทศ"); country1.appendChild(country1Text); }
-        else if (i == 1) { let country1Text = document.createTextNode("ไทย"); country1.appendChild(country1Text); }
-        else if (i == 2) { let country1Text = document.createTextNode("เวียดนาม"); country1.appendChild(country1Text); }
-        else if (i == 3) { let country1Text = document.createTextNode("ลาว"); country1.appendChild(country1Text); }
-        else if (i == 4) { let country1Text = document.createTextNode("มาเลย์เซีย"); country1.appendChild(country1Text); }
-        else if (i == 5) { let country1Text = document.createTextNode("สิงคโปร์"); country1.appendChild(country1Text); }
-        else if (i == 6) { let country1Text = document.createTextNode("ฟิลิปปินส์"); country1.appendChild(country1Text); }
-        else if (i == 7) { let country1Text = document.createTextNode("เมียนมาร์"); country1.appendChild(country1Text); }
-        else if (i == 8) { let country1Text = document.createTextNode("กัมพูชา"); country1.appendChild(country1Text); }
-        else if (i == 9) { let country1Text = document.createTextNode("บรูไน"); country1.appendChild(country1Text); }
-        select.appendChild(country1);
+  }
+  
+  function init(choose_lang) {
+    document.body.innerHTML = '';
+    const nameDiv = document.createElement('div');
+    const nameLabel = document.createElement('label');
+    nameLabel.for = 'name';
+    nameLabel.innerHTML = `${lang[choose_lang].name}: `;
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.id = 'name';
+    
+    nameDiv.appendChild(nameLabel);
+    nameDiv.appendChild(nameInput);
+    
+    const surnameDiv = document.createElement('div');
+    const surnameLabel = document.createElement('label');
+    surnameLabel.for = 'surname';
+    surnameLabel.innerHTML = `${lang[choose_lang].surname}: `;
+    const surnameInput = document.createElement('input');
+    surnameInput.type = 'text';
+    surnameInput.id = 'surname';
+    
+    surnameDiv.appendChild(surnameLabel);
+    surnameDiv.appendChild(surnameInput);
+  
+    const countryDiv = document.createElement('div');
+    const countryLabel = document.createElement('label');
+    countryLabel.for = 'country';
+    countryLabel.innerHTML = `${lang[choose_lang].country[0]}: `;
+    const countrySelect = document.createElement('select');
+    for (let index = 0; index < lang[choose_lang].country[1].length; index++) {
+      const country = lang[choose_lang].country[1][index];
+      let option = document.createElement('option');
+      option.value = country.value;
+      option.innerHTML = country.name;
+      countrySelect.appendChild(option);
     }
-    country.appendChild(select);
-    newSub.appendChild(country);
-    let button = document.createElement("button");
-    let buttonType = document.createAttribute("type");
-    buttonType.value = "type";
-    button.setAttributeNode(buttonType);
-    let buttonOnclick = document.createAttribute("onclick");
-    buttonOnclick.value = "change()";
-    button.setAttributeNode(buttonOnclick);
-    let buttonText = document.createTextNode("เปลี่ยนเป็นภาษาอังกฤษ")
-    button.appendChild(buttonText);
-    newSub.appendChild(button);
-}
-
-function english(all, sub) {
-    all.removeChild(sub);
-    let newSub = document.createElement("div");
-    all.appendChild(newSub);
-    let subAtt = document.createAttribute("id");
-    subAtt.value = "sub";
-    newSub.setAttributeNode(subAtt);
-    let newName = document.createElement("p");
-    let nameText = document.createTextNode("First Name:");
-    newName.appendChild(nameText);
-    let nameInput = document.createElement("input");
-    let inputAtt = document.createAttribute("type");
-    inputAtt.value = "text";
-    nameInput.setAttributeNode(inputAtt);
-    newName.appendChild(nameInput);
-    newSub.appendChild(newName);
-    let newLName = document.createElement("p");
-    let lNameText = document.createTextNode("Last Name:");
-    newLName.appendChild(lNameText);
-    let lNameInput = document.createElement("input");
-    let inputAtt2 = document.createAttribute("type");
-    lNameInput.setAttributeNode(inputAtt2);
-    newLName.appendChild(lNameInput);
-    newSub.appendChild(newLName);
-    let country = document.createElement("p");
-    let countryText = document.createTextNode("Country:");
-    country.appendChild(countryText);
-    let select = document.createElement("select");
-    let i = 0;
-    for (i; i < 10; i++) {
-        let country1 = document.createElement("option");
-        if (i == 0) { let country1Text = document.createTextNode("Select a country"); country1.appendChild(country1Text); }
-        else if (i == 1) { let country1Text = document.createTextNode("Thailand"); country1.appendChild(country1Text); }
-        else if (i == 2) { let country1Text = document.createTextNode("Vietnam"); country1.appendChild(country1Text); }
-        else if (i == 3) { let country1Text = document.createTextNode("Laos"); country1.appendChild(country1Text); }
-        else if (i == 4) { let country1Text = document.createTextNode("Malaysia"); country1.appendChild(country1Text); }
-        else if (i == 5) { let country1Text = document.createTextNode("Singapore"); country1.appendChild(country1Text); }
-        else if (i == 6) { let country1Text = document.createTextNode("Philippines"); country1.appendChild(country1Text); }
-        else if (i == 7) { let country1Text = document.createTextNode("Myanmar"); country1.appendChild(country1Text); }
-        else if (i == 8) { let country1Text = document.createTextNode("Cambodia"); country1.appendChild(country1Text); }
-        else if (i == 9) { let country1Text = document.createTextNode("Brunei"); country1.appendChild(country1Text); }
-        select.appendChild(country1);
-    }
-    country.appendChild(select);
-    newSub.appendChild(country);
-    let button = document.createElement("button");
-    let buttonType = document.createAttribute("type");
-    buttonType.value = "type";
-    button.setAttributeNode(buttonType);
-    let buttonOnclick = document.createAttribute("onclick");
-    buttonOnclick.value = "change()";
-    button.setAttributeNode(buttonOnclick);
-    let buttonText = document.createTextNode("Change to Thai")
-    button.appendChild(buttonText);
-    newSub.appendChild(button);
-}
+  
+    countryDiv.appendChild(countryLabel);
+    countryDiv.appendChild(countrySelect);
+  
+    const btn = document.createElement('button');
+    btn.innerHTML = lang[choose_lang].btnlabel;
+    btn.addEventListener('click', () => { 
+      if (choose_lang === 'th') {
+        init('en');
+      } else {
+        init('th');
+      }
+    });
+    
+    document.body.appendChild(nameDiv);
+    document.body.appendChild(surnameDiv);
+    document.body.appendChild(countryDiv);
+    document.body.appendChild(btn);
+  }
+  
+  init('th');

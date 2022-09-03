@@ -2,40 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="info">
-        <h2>ลงทะเบียนร่วมงาน</h2>
-        <input id="sid" type="text" placeholder="รหัสนักศึกษา"><input class="input-group" id="fname" type="text"
-            placeholder="ชื่อ"><input id="lname" type="text" placeholder="นามสกุล"><button
-            onclick="register()">ลงทะเบียน</button>
-        <br>
-        <br>
-        <table id="table">
-            <tr>
-                <th>ลำดับที่</th>
-                <th>รหัสนักศึกษา</th>
-                <th>ชื่อ</th>
-                <th>นามสกุล</th>
-            </tr>
-        </table>
-    </div>
+  <h1>ลงทะเบียนร่วมงาน</h1>
+  <input type="number" id="std_number" placeholder="รหัสนักศึกษา">
+  <input type="text" id="std_name" placeholder="ชื่อ">
+  <input type="text" id="std_surname" placeholder="นามสกุล">
+  <button id="btn_submit">ลงทะเบียน</button>
+  <hr>
+  <table>
+    <thead>
+      <th>ลำดับที่</th>
+      <th>รหัสนักศึกษา</th>
+      <th>ชื่อ</th>
+      <th>นามสกุล</th>
+    </thead>
+    <tbody id="insertHere">
+
+    </tbody>
+  </table>
+  <script src="script.js"></script>
 </body>
-<style>
-    table{
-        border-collapse: collapse;
-    }
-    th {
-        padding: 10px;
-        border: 2px solid black;
-        background-color: azure;
-    }
-</style>
 
 </html>
