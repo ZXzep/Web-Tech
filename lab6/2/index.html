@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Popular cat names</h1>
+    <p id="topic">The popularity of cat names differs by nation, even nations with the same language. The ranking of
+        most popular cat names can be assessed, in particular, from pet insurance registrations, microchip
+        registrations, and breed registries.</p>
+    <br>
+    <h2>List of cat names</h2>
+    <div class="first_cat">
+        <img src="img/first.png" style="width:100%;">
+        <p>Exotic Shorthair</p>
+    </div>
+    <div class="second_cat">
+        <img src="img/second.png" style="width:100%;">
+        <p>Ragdoll</p>
+    </div>
+    <div class="third_cat">
+        <img src="img/third.png" style="width:100%;">
+        <p>British Shorthair</p>
+    </div>
+    <div class="fourth_cat">
+        <img src="img/fourth.png" style="width:100%;">
+        <p>Persian</p>
+    </div>
+</body>
+<style>
+    #topic{
+        color: black;
+    }
+    p{
+        color: white;
+    }
+    .first_cat,
+    .second_cat,
+    .third_cat,
+    .fourth_cat {
+        float: left;
+        width: 49%;
+        border: 2px solid black;
+    }
+
+    .first_cat {
+        background-color: black;
+        text-align: center;
+    }
+
+    .second_cat {
+        background-color: black;
+        text-align: center;
+    }
+
+    .third_cat {
+        background-color: black;
+        text-align: center;
+    }
+
+    .fourth_cat {
+        background-color: black;
+        text-align: center;
+    }
+
+    @media screen and (max-width:600px) {
+
+        .first_cat,
+        .second_cat,
+        .third_cat,
+        .fourth_cat {
+            width: 100%;
+        }
+    }
+</style>
+
+</html>

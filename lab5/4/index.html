@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<style>
+    body{
+        font-family: 'Prompt', sans-serif;
+
+    }
+</style>
+<script>
+    let requestURL = 'movies.json';
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            ExtractData(JSON.parse(request.responseText));
+        }
+    };
+    request.open("GET", requestURL, true);
+    request.send();
+
+    function ExtractData(data) {
+        document.write(`<h1 style="display:flex;justify-content:center;margin-top:2%">Movie Showing</h1>`)
+        document.write(`<body style="font-family: 'Prompt', sans-serif;"><div style="display:flex;justify-content:center;align-items:center;margin-top:1%;">`)
+        for (let i = 0; i < data.movies.showing.length; i++) {
+            document.write(`<div style="margin:40px 10px;border: 2px solid #eee;padding: 0px 20px 15px 20px;border-radius: 5px;position:relative;min-width:170px">\
+            <img src="${data.movies.showing[i].poster}" style="width:150px;position:absolute;top:-10%;left:14%;border-radius:2px">\
+            <div style="width:150px;height:200px;margin-bottom:10px;"></div>\
+            <div style="display:flex;justify-content:center"><h5 style="margin:0px">${data.movies.showing[i].title_th}</h5></div>\
+            <div style="display:flex;justify-content:center;font-size:12px"><p>Release date : ${data.movies.showing[i].releasedate}</p></div>\
+            <button type="button" style="margin-left:10px;padding:5px 34px;background-color:#007bff;color:white;border-radius:5px;border: 0px;font-size:12px">เช็ครอบภาพยนต์</button></div>`)
+        }
+        document.write("</div>")
+        document.write(`<h1 style="display:flex;justify-content:center;margin-top:2%">Coming Soon</h1>`)
+        document.write(`<div style="display:flex;justify-content:center;align-items:center;margin-top:1%">`)
+        for (let i = 0; i < data.movies.comingsoon.length; i++) {
+            document.write(`<div style="margin:40px 10px;border: 2px solid #eee;padding: 0px 20px 15px 20px;border-radius: 5px;position:relative;min-width:170px">\
+            <img src="${data.movies.comingsoon[i].poster}" style="width:150px;position:absolute;top:-10%;left:14%;border-radius:2px">\
+            <div style="width:150px;height:200px;margin-bottom:10px;"></div>\
+            <div style="display:flex;justify-content:center"><h5 style="margin:0px">${data.movies.comingsoon[i].title_th}</h5></div>\
+            <div style="display:flex;justify-content:center;font-size:12px"><p>Release date : ${data.movies.comingsoon[i].releasedate}</p></div>\
+            <button type="button" style="margin-left:10px;padding:5px 34px;background-color:#007bff;color:white;border-radius:5px;border: 0px;font-size:12px">เช็ครอบภาพยนต์</button></div>`)
+    }
+    }
+</script>
+
+</html>
