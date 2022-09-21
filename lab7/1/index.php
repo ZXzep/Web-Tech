@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js">
     </script>
@@ -18,7 +19,7 @@
     <form id="calform" action="index.php" method="post">
         <label for="inpvalue">กรอกสูตรคูณ : </label>
         <input type="text" id="inpvalue" name="inpvalue" value="" />
-        <input type="submit" id="submit" value="แสดงตาราง">
+        <input class="btn btn-light" type="submit" id="submit" value="แสดงตาราง">
     </form>
     <?php 
     if (isset($_POST['inpvalue'])) { 
