@@ -12,107 +12,71 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    table {
+        border: 1px solid black;
+        text-align: center;
+        height: 100px;
+
+    }
+
+    table th,
+    td {
+        border: 1px solid black;
+        font-size: 30px;
+        padding: 10px;
+        width: 10px;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+    }
+</style>
 <body>
-    <div class="container">
-        <h1>
-            <?php
-            // รหัสนศ.
-            $sid = 64070182;
-            // echo $sid." ";
-            $sid = $sid % 10;
-            if ($sid == 0) {
-                $sid = 10;
-            }
-            // echo $sid." ";
-
-            $d1 = strtotime("2022/" . $sid . "/1");
-            // echo $d1." ";
-            $Months = [
-                "Januaray",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"
-            ];
-            $DayOfMonth = array(
-                "Januaray" => 31,
-                "February" => 28,
-                "March" => 31,
-                "April" => 30,
-                "May" => 31,
-                "June" => 30,
-                "July" => 31,
-                "August" => 31,
-                "September" => 30,
-                "October" => 31,
-                "November" => 30,
-                "December" => 31
-            );
-            $thismonts = $Months[$sid - 1];
-            echo  $Months[$sid - 1];
-            $wd = date("l", $d1);
-            echo " 2022 start at " . $wd;
-            $bd = array(
-                "Sunday" => 0,
-                "Monday" => 1,
-                "Tuesday" => 2,
-                "Wednesday" => 3,
-                "Thursday" => 4,
-                "Friday" => 5,
-                "Saturday" => 6,
-            )
-            ?>
-        </h1>
-
-        <table class="table table-bordered">
-            <thead>
+<div>
+        <div class="head">
+            <h1>February 2022</h1>
+        </div>
+        <div>
+            <table>
                 <tr>
-                    <?php
-                    $weekday = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-                    foreach ($weekday as $day) {
-                        echo "<th scope=\"col\" class=\"\"><div class=\"col rounded m-4 fontw text-center text-uppercase pt-4 $day\"><h1>$day</h1></div></th>";
-                        // echo `<th scope="col" class=""><div class="col rounded m-4 fontw text-center text-uppercase pt-4 $day"><h1>$day</h1></div>></th>`;
-                    }
-                    ?>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
                 </tr>
-            </thead>
-            <tbody>
                 <?php
-                $w = $bd[$wd];
-                echo "<tr>";
-                for ($i = 0; $i < $w; $i++) {
-                    echo "<td></td>";
-                }
-                for ($i = 1; $i <= $DayOfMonth[$thismonts]; $i++) {
-
-                    if ($w == 0) {
-                        echo "<tr>";
+                $k = -1;
+                for ($i = 0; $i < 5; $i++) {
+                    for ($j = 0; $j < 7; $j++) {
+                        if ($k > 0 && $k <= 30) {
+                            echo "<td>$k</td>";
+                        } else {
+                            echo "<td></td>";
+                        }
+                        $k++;
                     }
-
-
-                    echo "<td class=\" text-center\">$i</td>";
-                    if ($w == 6) {
-                        echo "</tr>";
-                    }
-                    $w++;
-                    $w = $w % 7;
+                    echo "</tr>";
                 }
-                for ($i = 0; $i < 7 - $w; $i++) {
-                    echo "<td></td>";
-                }
-
                 ?>
-
-            </tbody>
-        </table>
+            </table>
+        </div>
     </div>
 </body>
 
