@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="index.php" method="POST">
+    <form action="index.php" method="POST">
         <label for="prodname">Name :</label>
         <input type="text" id="prodname" name="prodname" placeholder="Enter Product Name" required/>
         <button type="submit" name="submit">Submit</button>
-    </form> -->
+    </form>
     <?php
     //     $url = "https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all";
     //     $response = file_get_contents($url);
@@ -24,18 +24,18 @@
     //         echo "คนตาย : $case->new_death ";
     //         echo "<br>";            
     //     } 
-        $url = "http://10.0.15.20/lab8/restapis/superheroes";    
-        $response = file_get_contents($url);
-        $result = json_decode($response);
+        // $url = "http://10.0.15.20/lab8/restapis/superheroes";    
+        // $response = file_get_contents($url);
+        // $result = json_decode($response);
     
-        echo "Squad Name : $result->squadName<br>";
-        echo "Home Town : $result->homeTown<br>";    
-        foreach ($result->members as $member) {  
-            echo "$member->name ( $member->age )<br>";
-            foreach ($member->powers as $power){
-                echo "<t>-- $power<br>";
-            }     
-        }
+        // echo "Squad Name : $result->squadName<br>";
+        // echo "Home Town : $result->homeTown<br>";    
+        // foreach ($result->members as $member) {  
+        //     echo "$member->name ( $member->age )<br>";
+        //     foreach ($member->powers as $power){
+        //         echo "<t>-- $power<br>";
+        //     }     
+        // }
     ?>
 </body>
 </html>
