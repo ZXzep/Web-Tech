@@ -52,33 +52,22 @@
             </thead>
             <thead>
                 <?php
-                    // Connect to Database 
-                    class MyDB extends SQLite3 {
-                        function __construct() {
+                    class MyDB extends SQLite3
+                    {
+                        function __construct()
+                        {
                             $this->open('company.db');
                         }
                     }
-
-                     // Open Database 
                     $db = new MyDB();
-
-                    // Create a Table using SQL
                     $sql = <<<EOF
-                        CREATE TABLE COMPANY
-                        (ID INT PRIMARY KEY     NOT NULL,
-                        NAME           TEXT    NOT NULL,
-                        AGE            INT     NOT NULL,
-                        ADDRESS        CHAR(50),
-                        SALARY         REAL);
-                    EOF;
-                    // $ret = $db->exec($sql);
-                    // if(!$ret){
-                    //     echo $db->lastErrorMsg();
-                    // } else {
-                    //     echo "Table created successfully<br>";
-                    // }
-
-
+              CREATE TABLE COMPANY
+              (ID INT PRIMARY KEY     NOT NULL,
+              NAME           TEXT    NOT NULL,
+              AGE            INT     NOT NULL,
+              ADDRESS        CHAR(50),
+              SALARY         REAL);
+            EOF;
                     if (isset($_POST['ID'])) {
                         $id = $_POST['ID'];
                     }
@@ -88,21 +77,18 @@
                     if (isset($_POST['Age'])) {
                         $age = $_POST['Age'];
                     }
-                    if (isset($_POST['Address'])) {
-                        $address = $_POST['Address'];
-                    }
                     if (isset($_POST['Salary'])) {
                         $salary = $_POST['Salary'];
                     }
-
-                    // Insert
-                    $sql = <<<EOF
+                    if (isset($_POST['Address'])) {
+                        $address = $_POST['Address'];
+                        $sql = <<<EOF
                         INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
                         VALUES ($id,'$name',$age,'$address',$salary);
-                    EOF;
-                    // $ret = $db->exec($sql);
+                        EOF;
+                        $ret = $db->exec($sql);
+                    }
                     
-                    // SQL SELECT 
                     $sql = "SELECT * from COMPANY";
         
                     $ret = $db->query($sql);
@@ -125,6 +111,12 @@
 <style>
     body{
         font-family: 'Kanit', sans-serif;
+    }
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .form-control {
+        display: inline-block;
     }
 </style>
 </html>
